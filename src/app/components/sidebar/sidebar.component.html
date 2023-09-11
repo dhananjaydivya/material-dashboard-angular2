@@ -1,9 +1,9 @@
 <div class="logo">
     <a href="https://www.creative-tim.com" class="simple-text">
         <div class="logo-img">
-            <img src="/assets/img/angular2-logo-red.png"/>
+            <img src="/assets/img/tim_80x80.png"/>
         </div>
-        Creative Tim
+        Creative Timm
     </a>
 </div>
 <div class="sidebar-wrapper">
@@ -54,7 +54,7 @@
         </li>
     </ul>
   </div>
-    <ul class="nav">
+    <ul class="nav" *ngIf="!isMobileMenu()">
         <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
             <a class="nav-link" [routerLink]="[menuItem.path]">
                 <i class="material-icons">{{menuItem.icon}}</i>
